@@ -245,6 +245,13 @@
 			path = HomeKit;
 			sourceTree = "<group>";
 		};
+		462968E1206A15CC00D6CC83 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
 		5214D0CF18881D0200460637 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +304,7 @@
 		5217F3EB1859EE0000F2D5BB /* Breeze Blue */ = {
 			isa = PBXGroup;
 			children = (
+				462968E1206A15CC00D6CC83 /* Control */,
 				309F08661E6D706B00B7546A /* Breeze Blue.entitlements */,
 				A8F1142619C1B7EC007F956E /* StoryBoard */,
 				3069A1D21CDC76FE003869EA /* BluetoothManager */,
