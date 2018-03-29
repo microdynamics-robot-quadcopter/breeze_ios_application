@@ -217,7 +217,8 @@ class BBViewController: NORBaseViewController, NORBluetoothManagerDelegate, NORS
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationDidBecomeActiveCallback), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
 
         //==========NEW===========
-        startTimer()
+//        startTimer()
+        setTheTimer()
         //==========NEW===========
     }
 
@@ -239,7 +240,8 @@ class BBViewController: NORBaseViewController, NORBluetoothManagerDelegate, NORS
         bluetoothManager = nil
 
         //==========NEW===========
-        stopTimer()
+//        stopTimer()
+        deinitTimer()
         //==========NEW===========
     }
 
@@ -259,6 +261,38 @@ class BBViewController: NORBaseViewController, NORBluetoothManagerDelegate, NORS
     }
 
     //==========NEW===========
+    private var test_timer: DispatchSourceTimer?
+    var pageStepTime: DispatchTimeInterval = .seconds(1)
+
+    // deadline 结束时间
+    // interval 时间间隔
+    // leeway  时间精度
+    func setTheTimer() {
+        test_timer = DispatchSource.makeTimerSource(queue: .main)
+        test_timer?.scheduleRepeating(deadline: .now() + pageStepTime, interval: pageStepTime)
+        test_timer?.setEventHandler {
+            self.viewModel?.breezeblue?.commander?.prepareData()
+            let tmproll = self.viewModel?.breezeblue?.commander?.roll
+            let tmppitch = self.viewModel?.breezeblue?.commander?.pitch
+            let tmpthrust = self.viewModel?.breezeblue?.commander?.thrust
+            let tmpyaw = self.viewModel?.breezeblue?.commander?.yaw
+            self.sendFlightData(tmproll!, pitch: tmppitch!, thrust: tmpthrust!, yaw: tmpyaw!)
+        }
+        // 启动定时器
+        test_timer?.resume()
+    }
+
+    func deinitTimer() {
+        if let time = self.test_timer {
+            time.cancel()
+            test_timer = nil
+        }
+    }
+
+
+
+
+
     private func startTimer() {
         stopTimer()
 
