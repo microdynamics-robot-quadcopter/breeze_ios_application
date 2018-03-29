@@ -58,8 +58,9 @@
 		30A1145A1CD2426B000F0F02 /* NORScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A114591CD2426B000F0F02 /* NORScannerDelegate.swift */; };
 		30A1145C1CD24611000F0F02 /* NORScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1145B1CD24611000F0F02 /* NORScannerViewController.swift */; };
 		462968E9206A7D2A00D6CC83 /* BBJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462968E8206A7D2A00D6CC83 /* BBJoystick.swift */; };
-		462968EB206A7DD900D6CC83 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462968EA206A7DD900D6CC83 /* ControlViewController.swift */; };
+		462968EB206A7DD900D6CC83 /* BBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462968EA206A7DD900D6CC83 /* BBViewController.swift */; };
 		462968ED206A81B300D6CC83 /* BBJoystickViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462968EC206A81B300D6CC83 /* BBJoystickViewModel.swift */; };
+		4633387C206C6B8F00BA56D3 /* BBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4633387B206C6B8F00BA56D3 /* BBViewModel.swift */; };
 		464725A3206BA09A009AFF63 /* BBSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464725A2206BA09A009AFF63 /* BBSettingsViewController.swift */; };
 		464725A5206BA237009AFF63 /* BBSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464725A4206BA237009AFF63 /* BBSettingsViewModel.swift */; };
 		464725A7206BA29D009AFF63 /* BBObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464725A6206BA29D009AFF63 /* BBObserver.swift */; };
@@ -67,6 +68,7 @@
 		464725AB206BA6E5009AFF63 /* BBCommander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464725AA206BA6E5009AFF63 /* BBCommander.swift */; };
 		464725AD206BA7B0009AFF63 /* BB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464725AC206BA7B0009AFF63 /* BB.swift */; };
 		464725AF206BA8B1009AFF63 /* BBMotionLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464725AE206BA8B1009AFF63 /* BBMotionLink.swift */; };
+		46827227206C8A5E0007EB4B /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46827226206C8A5D0007EB4B /* DefaultPreferences.plist */; };
 		5211EFAE18856430007CC40D /* icon-dfu-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 5211EFAA1885642F007CC40D /* icon-dfu-64.png */; };
 		5211EFAF18856430007CC40D /* icon-dfu-320.png in Resources */ = {isa = PBXBuildFile; fileRef = 5211EFAB1885642F007CC40D /* icon-dfu-320.png */; };
 		5211EFB018856430007CC40D /* icon-hex.png in Resources */ = {isa = PBXBuildFile; fileRef = 5211EFAC1885642F007CC40D /* icon-hex.png */; };
@@ -156,8 +158,9 @@
 		30A1145B1CD24611000F0F02 /* NORScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NORScannerViewController.swift; sourceTree = "<group>"; };
 		4394EAC53F8A0FF797E7CA7A /* Pods-Breeze Blue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeze Blue.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breeze Blue/Pods-Breeze Blue.release.xcconfig"; sourceTree = "<group>"; };
 		462968E8206A7D2A00D6CC83 /* BBJoystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BBJoystick.swift; path = "Breeze Blue/Flight Control/BBJoystick.swift"; sourceTree = SOURCE_ROOT; };
-		462968EA206A7DD900D6CC83 /* ControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControlViewController.swift; path = "Breeze Blue/Flight Control/ControlViewController.swift"; sourceTree = SOURCE_ROOT; };
+		462968EA206A7DD900D6CC83 /* BBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BBViewController.swift; path = "Breeze Blue/Flight Control/BBViewController.swift"; sourceTree = SOURCE_ROOT; };
 		462968EC206A81B300D6CC83 /* BBJoystickViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBJoystickViewModel.swift; sourceTree = "<group>"; };
+		4633387B206C6B8F00BA56D3 /* BBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBViewModel.swift; sourceTree = "<group>"; };
 		464725A2206BA09A009AFF63 /* BBSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBSettingsViewController.swift; sourceTree = "<group>"; };
 		464725A4206BA237009AFF63 /* BBSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBSettingsViewModel.swift; sourceTree = "<group>"; };
 		464725A6206BA29D009AFF63 /* BBObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBObserver.swift; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 		464725AA206BA6E5009AFF63 /* BBCommander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBCommander.swift; sourceTree = "<group>"; };
 		464725AC206BA7B0009AFF63 /* BB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BB.swift; sourceTree = "<group>"; };
 		464725AE206BA8B1009AFF63 /* BBMotionLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBMotionLink.swift; sourceTree = "<group>"; };
+		46827226206C8A5D0007EB4B /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
 		51E9CFCBE6C75A89E5780FE4 /* Pods-Breeze Blue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breeze Blue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Breeze Blue/Pods-Breeze Blue.debug.xcconfig"; sourceTree = "<group>"; };
 		5211EFAA1885642F007CC40D /* icon-dfu-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dfu-64.png"; sourceTree = "<group>"; };
 		5211EFAB1885642F007CC40D /* icon-dfu-320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dfu-320.png"; sourceTree = "<group>"; };
@@ -342,6 +346,7 @@
 		5217F3EC1859EE0000F2D5BB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				46827226206C8A5D0007EB4B /* DefaultPreferences.plist */,
 				A85667DD1B222AA7004A6D3C /* AppImages */,
 				7E1B422818A8DF4D006BA1BC /* high.mp3 */,
 				5217F3ED1859EE0000F2D5BB /* Breeze Blue-Info.plist */,
@@ -389,7 +394,7 @@
 		5236E164187EA7850057E974 /* Flight Control */ = {
 			isa = PBXGroup;
 			children = (
-				462968EA206A7DD900D6CC83 /* ControlViewController.swift */,
+				462968EA206A7DD900D6CC83 /* BBViewController.swift */,
 				462968E8206A7D2A00D6CC83 /* BBJoystick.swift */,
 				462968EC206A81B300D6CC83 /* BBJoystickViewModel.swift */,
 				464725A2206BA09A009AFF63 /* BBSettingsViewController.swift */,
@@ -399,6 +404,7 @@
 				464725AA206BA6E5009AFF63 /* BBCommander.swift */,
 				464725AC206BA7B0009AFF63 /* BB.swift */,
 				464725AE206BA8B1009AFF63 /* BBMotionLink.swift */,
+				4633387B206C6B8F00BA56D3 /* BBViewModel.swift */,
 			);
 			path = "Flight Control";
 			sourceTree = "<group>";
@@ -643,6 +649,7 @@
 				5217F3FE1859EE0000F2D5BB /* Images.xcassets in Resources */,
 				7E1B422918A8DF4D006BA1BC /* high.mp3 in Resources */,
 				52BDCBC61C47C2C300E2680F /* Launch Screen.storyboard in Resources */,
+				46827227206C8A5E0007EB4B /* DefaultPreferences.plist in Resources */,
 				5211EFAE18856430007CC40D /* icon-dfu-64.png in Resources */,
 				5217F3F01859EE0000F2D5BB /* InfoPlist.strings in Resources */,
 				5211EFB118856430007CC40D /* icon-hex@2x.png in Resources */,
@@ -733,6 +740,7 @@
 				30A1145C1CD24611000F0F02 /* NORScannerViewController.swift in Sources */,
 				308AA57A1CD8DD4300CC9857 /* NORGlucoseReadingContext.swift in Sources */,
 				3001432B1CEC6D2A008379DF /* NORBGMRecordAccess.swift in Sources */,
+				4633387C206C6B8F00BA56D3 /* BBViewModel.swift in Sources */,
 				304D58FF1CE3521900148271 /* NORLogItem.swift in Sources */,
 				464725AD206BA7B0009AFF63 /* BB.swift in Sources */,
 				3042993C1CE6154100E1D2AB /* NORBaseRevealViewController.swift in Sources */,
@@ -771,7 +779,7 @@
 				3001EBC31D1C1430008C5C37 /* NORCGMItemCell.swift in Sources */,
 				3001EBB91D1BE1FB008C5C37 /* NORBGMViewController.swift in Sources */,
 				30921FD51CD0EB55009CBDDE /* NORMainViewController.swift in Sources */,
-				462968EB206A7DD900D6CC83 /* ControlViewController.swift in Sources */,
+				462968EB206A7DD900D6CC83 /* BBViewController.swift in Sources */,
 				462968ED206A81B300D6CC83 /* BBJoystickViewModel.swift in Sources */,
 				3001EBBD1D1BE695008C5C37 /* NORCGMFeatureData.swift in Sources */,
 				3001EBB81D1BE1FB008C5C37 /* NORBGMItemCell.swift in Sources */,
