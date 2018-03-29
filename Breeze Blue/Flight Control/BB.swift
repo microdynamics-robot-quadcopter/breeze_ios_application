@@ -38,7 +38,7 @@ open class BreezeBlue: NSObject {
             delegate?.didUpdate(state: state)
         }
     }
-    private var timer:Timer?
+//    private var timer:Timer?
     private var delegate: BreezeBlueDelegate?
 //    private(set) var bluetoothLink:BluetoothLink!
 
@@ -68,7 +68,7 @@ open class BreezeBlue: NSObject {
 //            }
 //        }
 
-        startTimer()
+//        startTimer()
     }
 
 //    func connect(_ callback:((Bool) -> Void)?) {
@@ -115,27 +115,27 @@ open class BreezeBlue: NSObject {
 
     // MARK: - Private Methods
 
-    private func startTimer() {
-        stopTimer()
+//    private func startTimer() {
+//        stopTimer()
+//
+//        self.timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(self.updateData), userInfo:nil, repeats:true)
+//    }
+//
+//    private func stopTimer() {
+//        if timer != nil {
+//            timer?.invalidate()
+//            timer = nil
+//        }
+//    }
 
-        self.timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(self.updateData), userInfo:nil, repeats:true)
-    }
-
-    private func stopTimer() {
-        if timer != nil {
-            timer?.invalidate()
-            timer = nil
-        }
-    }
-
-    @objc private func updateData(_ timter:Timer){
-        guard timer != nil, let commander = commander else {
-            return
-        }
-
-        commander.prepareData()
+//    @objc private func updateData(_ timter:Timer){
+//        guard timer != nil, let commander = commander else {
+//            return
+//        }
+//
+//        commander.prepareData()
 //        sendFlightData(commander.roll, pitch: commander.pitch, thrust: commander.thrust, yaw: commander.yaw)
-    }
+//    }
 
 //    private func sendFlightData(_ roll:Float, pitch:Float, thrust:Float, yaw:Float) {
 //        let commandPacket = CommanderPacket(header: BreezeBlueHeader.commander.rawValue, roll: roll, pitch: pitch, yaw: yaw, thrust: UInt16(thrust))

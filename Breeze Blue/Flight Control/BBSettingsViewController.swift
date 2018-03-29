@@ -43,9 +43,8 @@ final class BBSettingsViewController: UIViewController {
     }
 
     // MARK: - Private Methods
-
     private func setupUI() {
-        closeButton.layer.borderColor = closeButton.tintColor.cgColor
+//        closeButton.layer.borderColor = closeButton.tintColor.cgColor
 
         if BBMotionLink().canAccessMotion {
             controlModeSelector.insertSegment(withTitle: "Tilt Mode", at: 4, animated: true)
@@ -88,9 +87,9 @@ final class BBSettingsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func onBootloaderClicked( _ sender: Any) {
-        viewModel?.bootloaderClicked()
-    }
+//    @IBAction func onBootloaderClicked( _ sender: Any) {
+//        viewModel?.bootloaderClicked()
+//    }
 }
 
 extension BBSettingsViewController: BBSettingsViewModelDelegate {
