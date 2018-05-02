@@ -30,13 +30,23 @@ class BBViewController: NORBaseViewController, NORBluetoothManagerDelegate, NORS
 
 
     //MAKR: TEST
+    @IBOutlet weak var powerOff: UIButton!
     @IBOutlet weak var slideValue: UILabel!
+
+    @IBAction func closePowerOff(_ sender: Any) {
+        self.send(value: "$>")
+        self.send(value: "4")
+        self.send(value: "<")
+    }
 
     @IBAction func slideValueChange(_ sender: Any) {
         let slide = sender as! UISlider
         let newText = NSString(format: "%f", slide.value)
         self.slideValue.text = newText as String
         self.send(value: self.slideValue.text!)
+
+
+
 //        let commander = viewModel?.breezeblue?.commander
 //
 //        commander?.prepareData()
@@ -325,16 +335,21 @@ class BBViewController: NORBaseViewController, NORBluetoothManagerDelegate, NORS
     }
 
     private func sendFlightData(_ roll:Float, pitch:Float, thrust:Float, yaw:Float){
-        let bleSendRollValue   = NSString(format: "%f", roll)
-        let bleSendPitchValue  = NSString(format: "%f", pitch)
-        let bleSendThrustValue = NSString(format: "%f", thrust)
-        let bleSendYawValue    = NSString(format: "%f", yaw)
-        send(value: "$>MD")
+//        let bleSendRollValue   = NSString(format: "%f", roll)
+//        let bleSendPitchValue  = NSString(format: "%f", pitch)
+//        let bleSendThrustValue = NSString(format: "%f", thrust)
+//        let bleSendYawValue    = NSString(format: "%f", yaw)
+        let bleSendRollValue   = NSString(format: "%d", Int(roll))
+        let bleSendPitchValue  = NSString(format: "%d", Int(pitch))
+        let bleSendThrustValue = NSString(format: "%d", Int(thrust))
+        let bleSendYawValue    = NSString(format: "%d", Int(yaw))
+        send(value: "$>")
+        send(value: "5")
         send(value: bleSendRollValue as String)
         send(value: bleSendPitchValue as String)
-        send(value: bleSendThrustValue as String)
         send(value: bleSendYawValue as String)
-        send(value: "END")
+        send(value: bleSendThrustValue as String)
+        send(value: "<")
 //        self.send(value: self.slideValue.text!)
     }
     //==========NEW===========

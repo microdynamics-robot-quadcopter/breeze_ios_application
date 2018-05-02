@@ -2390,6 +2390,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98E-aD-5L7">
+                                <rect key="frame" x="169.5" y="81" width="35" height="30"/>
+                                <state key="normal" title="POW"/>
+                                <connections>
+                                    <action selector="closePowerOff:" destination="9ph-JI-A6G" eventType="touchUpInside" id="FYU-kS-m7D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96067994830000003" green="0.96084433790000001" blue="0.96066969629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -2399,7 +2406,9 @@
                             <constraint firstItem="n3t-Gg-zoB" firstAttribute="width" secondItem="gYC-Yi-2fv" secondAttribute="width" id="Ate-f2-ndL"/>
                             <constraint firstItem="0F9-he-53k" firstAttribute="top" secondItem="Tg0-My-Ebw" secondAttribute="bottom" constant="5" id="Bft-l1-UQQ"/>
                             <constraint firstItem="Tg0-My-Ebw" firstAttribute="leading" secondItem="YwY-LN-qZ3" secondAttribute="leading" id="Caz-us-gvE"/>
+                            <constraint firstItem="98E-aD-5L7" firstAttribute="top" secondItem="DP4-3N-4LK" secondAttribute="bottom" constant="10" id="D8x-WV-Ox1"/>
                             <constraint firstAttribute="centerX" secondItem="DP4-3N-4LK" secondAttribute="centerX" id="Ega-aU-HkV"/>
+                            <constraint firstItem="98E-aD-5L7" firstAttribute="centerX" secondItem="YwY-LN-qZ3" secondAttribute="centerX" id="NCB-VH-eGc"/>
                             <constraint firstItem="ZOG-d7-lZz" firstAttribute="top" secondItem="rMu-A6-9qV" secondAttribute="bottom" constant="15" id="SQo-zr-qry"/>
                             <constraint firstItem="DP4-3N-4LK" firstAttribute="top" secondItem="0F9-he-53k" secondAttribute="bottom" constant="2" id="ZgG-Y9-Zua"/>
                             <constraint firstItem="ZOG-d7-lZz" firstAttribute="top" secondItem="n3t-Gg-zoB" secondAttribute="bottom" id="cAe-FM-394"/>
@@ -2424,6 +2433,7 @@
                         <outlet property="connectionButton" destination="DP4-3N-4LK" id="2wg-fF-30P"/>
                         <outlet property="deviceName" destination="0F9-he-53k" id="ki9-pS-fZS"/>
                         <outlet property="leftView" destination="gYC-Yi-2fv" id="Xkh-9h-FQh"/>
+                        <outlet property="powerOff" destination="98E-aD-5L7" id="tMv-b2-9Xh"/>
                         <outlet property="rightView" destination="n3t-Gg-zoB" id="yO5-Lx-M0h"/>
                         <outlet property="settingsButton" destination="rMu-A6-9qV" id="l0b-Zi-ofO"/>
                         <outlet property="slideValue" destination="TpV-zg-RHM" id="AOq-HA-ph0"/>
