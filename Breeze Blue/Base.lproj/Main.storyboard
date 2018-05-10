@@ -2350,7 +2350,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZdV-ZA-0aM">
-                                <rect key="frame" x="128" y="154" width="118" height="30"/>
+                                <rect key="frame" x="128" y="150" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="slideValueChange:" destination="9ph-JI-A6G" eventType="valueChanged" id="zoW-rl-ncc"/>
@@ -2383,30 +2383,52 @@
                                     <segue destination="PSw-D8-meA" kind="modal" identifier="settings" id="1s6-nh-YBU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98E-aD-5L7">
+                                <rect key="frame" x="168.5" y="464" width="39" height="32"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <state key="normal" title="STOP">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closePowerOff:" destination="9ph-JI-A6G" eventType="touchUpInside" id="FYU-kS-m7D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x46-ek-mW7">
+                                <rect key="frame" x="170.5" y="79" width="34" height="32"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <state key="normal" title="CALI"/>
+                                <connections>
+                                    <action selector="StartimuCali:" destination="9ph-JI-A6G" eventType="touchUpInside" id="HYy-qk-yZG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maZ-B1-hIr">
+                                <rect key="frame" x="164.5" y="259.5" width="46" height="32"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="ChangeLauchState:" destination="9ph-JI-A6G" eventType="touchUpInside" id="vdK-AH-FPJ"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpV-zg-RHM">
-                                <rect key="frame" x="141" y="140" width="159" height="21"/>
+                                <rect key="frame" x="147" y="127" width="159" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98E-aD-5L7">
-                                <rect key="frame" x="169.5" y="81" width="35" height="30"/>
-                                <state key="normal" title="POW"/>
-                                <connections>
-                                    <action selector="closePowerOff:" destination="9ph-JI-A6G" eventType="touchUpInside" id="FYU-kS-m7D"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96067994830000003" green="0.96084433790000001" blue="0.96066969629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gYC-Yi-2fv" firstAttribute="leading" secondItem="YwY-LN-qZ3" secondAttribute="leading" id="3vi-aw-zfF"/>
+                            <constraint firstItem="x46-ek-mW7" firstAttribute="top" secondItem="DP4-3N-4LK" secondAttribute="bottom" constant="8" id="4uv-9J-kDf"/>
+                            <constraint firstItem="maZ-B1-hIr" firstAttribute="centerX" secondItem="YwY-LN-qZ3" secondAttribute="centerX" id="5ya-v4-3PK"/>
+                            <constraint firstItem="rMu-A6-9qV" firstAttribute="top" secondItem="98E-aD-5L7" secondAttribute="bottom" constant="8" id="683-R0-foS"/>
                             <constraint firstItem="rMu-A6-9qV" firstAttribute="centerX" secondItem="YwY-LN-qZ3" secondAttribute="centerX" id="7EF-BP-y7D"/>
                             <constraint firstItem="n3t-Gg-zoB" firstAttribute="leading" secondItem="gYC-Yi-2fv" secondAttribute="trailing" constant="80" id="8u2-gV-Y25"/>
+                            <constraint firstItem="x46-ek-mW7" firstAttribute="centerX" secondItem="YwY-LN-qZ3" secondAttribute="centerX" id="8uM-2Q-Gfp"/>
                             <constraint firstItem="n3t-Gg-zoB" firstAttribute="width" secondItem="gYC-Yi-2fv" secondAttribute="width" id="Ate-f2-ndL"/>
                             <constraint firstItem="0F9-he-53k" firstAttribute="top" secondItem="Tg0-My-Ebw" secondAttribute="bottom" constant="5" id="Bft-l1-UQQ"/>
                             <constraint firstItem="Tg0-My-Ebw" firstAttribute="leading" secondItem="YwY-LN-qZ3" secondAttribute="leading" id="Caz-us-gvE"/>
-                            <constraint firstItem="98E-aD-5L7" firstAttribute="top" secondItem="DP4-3N-4LK" secondAttribute="bottom" constant="10" id="D8x-WV-Ox1"/>
                             <constraint firstAttribute="centerX" secondItem="DP4-3N-4LK" secondAttribute="centerX" id="Ega-aU-HkV"/>
                             <constraint firstItem="98E-aD-5L7" firstAttribute="centerX" secondItem="YwY-LN-qZ3" secondAttribute="centerX" id="NCB-VH-eGc"/>
                             <constraint firstItem="ZOG-d7-lZz" firstAttribute="top" secondItem="rMu-A6-9qV" secondAttribute="bottom" constant="15" id="SQo-zr-qry"/>
@@ -2416,6 +2438,7 @@
                             <constraint firstItem="Tg0-My-Ebw" firstAttribute="top" secondItem="I7e-jZ-VCG" secondAttribute="bottom" id="dAy-gq-y6r"/>
                             <constraint firstAttribute="trailing" secondItem="Tg0-My-Ebw" secondAttribute="trailing" id="kWC-mF-7Md"/>
                             <constraint firstItem="0F9-he-53k" firstAttribute="centerX" secondItem="YwY-LN-qZ3" secondAttribute="centerX" id="nTg-zG-II4"/>
+                            <constraint firstItem="maZ-B1-hIr" firstAttribute="centerY" secondItem="YwY-LN-qZ3" secondAttribute="centerY" id="qzc-MA-jNM"/>
                             <constraint firstItem="n3t-Gg-zoB" firstAttribute="top" secondItem="YwY-LN-qZ3" secondAttribute="top" id="tV6-5L-sse"/>
                             <constraint firstItem="gYC-Yi-2fv" firstAttribute="top" secondItem="YwY-LN-qZ3" secondAttribute="top" id="y11-Bf-fr2"/>
                             <constraint firstAttribute="trailing" secondItem="n3t-Gg-zoB" secondAttribute="trailing" id="z5I-IB-CPb"/>
@@ -2432,7 +2455,9 @@
                     <connections>
                         <outlet property="connectionButton" destination="DP4-3N-4LK" id="2wg-fF-30P"/>
                         <outlet property="deviceName" destination="0F9-he-53k" id="ki9-pS-fZS"/>
+                        <outlet property="imuCali" destination="x46-ek-mW7" id="oIC-Hl-SZM"/>
                         <outlet property="leftView" destination="gYC-Yi-2fv" id="Xkh-9h-FQh"/>
+                        <outlet property="motorLauch" destination="maZ-B1-hIr" id="yov-6M-0c0"/>
                         <outlet property="powerOff" destination="98E-aD-5L7" id="tMv-b2-9Xh"/>
                         <outlet property="rightView" destination="n3t-Gg-zoB" id="yO5-Lx-M0h"/>
                         <outlet property="settingsButton" destination="rMu-A6-9qV" id="l0b-Zi-ofO"/>

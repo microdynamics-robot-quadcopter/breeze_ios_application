@@ -26,12 +26,38 @@ class BBViewController: NORBaseViewController, NORBluetoothManagerDelegate, NORS
     private var timer:Timer?
 //    var commander: BreezeBlueCommander?
     var is_connect: Bool = false //Debug!!!
+    var is_start: Bool = false
     //==========NEW===========
 
 
     //MAKR: TEST
+    @IBOutlet weak var imuCali: UIButton!
+    @IBOutlet weak var motorLauch: UIButton!
     @IBOutlet weak var powerOff: UIButton!
     @IBOutlet weak var slideValue: UILabel!
+
+    @IBAction func StartimuCali(_ sender: Any) {
+        self.send(value: "$>")
+        self.send(value: "8")
+        self.send(value: "<")
+    }
+
+    @IBAction func ChangeLauchState(_ sender: Any) {
+        if(is_start == false) {
+            self.send(value: "$>")
+            self.send(value: "6")
+            self.send(value: "<")
+            is_start = true
+            self.motorLauch.setTitle("CLOSE", for: UIControlState())
+        }
+        else {
+            self.send(value: "$>")
+            self.send(value: "7")
+            self.send(value: "<")
+            is_start = false
+            self.motorLauch.setTitle("START", for: UIControlState())
+        }
+    }
 
     @IBAction func closePowerOff(_ sender: Any) {
         self.send(value: "$>")
